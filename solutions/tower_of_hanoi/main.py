@@ -12,5 +12,12 @@ def solve_tower(n: int, labels: List[str] = ['A', 'B', 'C']) -> list:
     return moves
 
 
+def pprint_moves(moves: List[List[str]]):
+    output = 'Solution, move top disc from x to x:'
+    for move in moves:
+        output += f'\n{move[0]} to {move[1]}'
+    print(output)
+
+
 if __name__ == '__main__':
-    print(solve_tower(3))
+    pprint_moves(solve_tower(3))
