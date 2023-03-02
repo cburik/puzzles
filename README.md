@@ -1,2 +1,2 @@
-# valcon_weekly_puzzles
+# Solving Puzzles
 Solving the weekly puzzles
