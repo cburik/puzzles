@@ -1,6 +1,6 @@
 import pytest
-from main import solve_tower
-from model import Tower
+from solutions.tower_of_hanoi.main import solve_tower
+from solutions.tower_of_hanoi.model import Tower
 
 
 @pytest.fixture
