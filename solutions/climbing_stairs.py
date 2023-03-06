@@ -4,9 +4,7 @@ def permutation_calculator(n_steps: int, max_step_size: int) -> int:
     when you can take max_step_size steps at a time
     """
     max_step_size = min(n_steps, max_step_size)
-    if n_steps < 0:
-        return 0
-    elif n_steps == 0:
+    if n_steps == 0:
         return 1
     else:
         return sum(map(
