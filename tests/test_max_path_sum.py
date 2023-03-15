@@ -40,8 +40,3 @@ def test_triangle_final_score(small_triangle):
     triangle = Triangle(small_triangle)
     triangle.calculate_totals()
     assert triangle.final_score() == 14
-
-
-def test_triangle_choices(small_triangle, small_triangle_expected_choices):
-    # TODO
-    pass

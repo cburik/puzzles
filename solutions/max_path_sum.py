@@ -23,12 +23,9 @@ class Triangle(object):
     def final_score(self):
         return max(self.triangle_totals[-1])
 
-    def calculate_choices(self):
-        # TODO: determine which choices were made
-        pass
-
 
 if __name__ == '__main__':
+    from timeit import timeit
     input_triangle = []
     with open('other/triangle.txt') as f:
         lines = f.readlines()
@@ -41,5 +38,5 @@ if __name__ == '__main__':
             input_triangle.append(row)
 
     triangle = Triangle(input_triangle)
-    triangle.calculate_totals()
+    print(timeit(triangle.calculate_totals, number=1000)/1000)
     print(triangle.final_score())
