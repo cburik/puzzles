@@ -28,9 +28,9 @@ def test_hamming_distance():
     assert hamming_distance(4, 1) == 2
 
 
-def test_total_hamming_distance():
+def test_total_hamming_distance_2_elements():
     assert total_hamming_distance([4, 1]) == 2
 
 
-def test_total_hamming_distance():
+def test_total_hamming_distance_3_elements():
     assert total_hamming_distance([4, 14, 4]) == 4
