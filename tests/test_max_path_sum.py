@@ -1,4 +1,5 @@
 import pytest
+
 from solutions.max_path_sum import Triangle
 
 

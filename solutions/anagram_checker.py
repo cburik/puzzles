@@ -12,9 +12,10 @@ def anagram_checker(string_one: str, string_two: str) -> bool:
 
 
 if __name__ == "__main__":
-    import big_o
-    import string
     import random
+    import string
+
+    import big_o
 
     def other_anagram(string_list):
         return anagram_checker(string_list[0], string_list[1])
