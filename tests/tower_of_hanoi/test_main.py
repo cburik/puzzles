@@ -8,19 +8,19 @@ from solutions.tower_of_hanoi.model import Tower
 def expected_state_n3():
     initial_list = list(range(3))
     initial_list.reverse()
-    return {"A": [], "B": [], "C": initial_list}
+    return {'A': [], 'B': [], 'C': initial_list}
 
 
 @pytest.fixture
 def expected_state_n10():
     initial_list = list(range(10))
     initial_list.reverse()
-    return {"A": [], "B": [], "C": initial_list}
+    return {'A': [], 'B': [], 'C': initial_list}
 
 
 def test_n1():
     solution = solve_tower(1)
-    assert solution == [["A", "C"]]
+    assert solution == [['A', 'C']]
 
 
 def test_n3(expected_state_n3):
