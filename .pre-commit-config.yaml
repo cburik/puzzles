@@ -39,7 +39,7 @@ repos:
     name: Run pytest
     description: Run pytest only on push
     language: python
-    entry: pytest -s -v tests
+    entry: pytest -s tests
     stages: [push]
     pass_filenames: false
     verbose: true
