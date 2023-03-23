@@ -1,6 +1,7 @@
 fail_fast: false
-repos:
+default_stages: [commit]
 
+repos:
 - repo: local
   hooks:
   - id: isort
