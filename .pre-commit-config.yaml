@@ -28,9 +28,16 @@ repos:
 
   - id: pylint
     name: Run pylint
-    description: runs pylint but does not block commit
     language: python
     entry: pylint
     args: [--max-line-length=120]
     types: [python]
     exclude: tests
+
+  - id: pytest
+    name: Run pytest
+    language: python
+    entry: pytest tests
+    stages: [push]
+    pass_filenames: false
+    verbose: true
