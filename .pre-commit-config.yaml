@@ -36,8 +36,9 @@ repos:
 
   - id: pytest
     name: Run pytest
+    description: Run pytest on push
     language: python
-    entry: pytest tests
+    entry: pytest -s -v tests
     stages: [push]
     pass_filenames: false
     verbose: true
