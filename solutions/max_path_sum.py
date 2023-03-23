@@ -16,7 +16,10 @@ class Triangle(object):
             row_totals[0] += self.triangle_totals[i - 1][0]
             row_totals[-1] += self.triangle_totals[i - 1][-1]
             for j in range(1, len(row) - 1):
-                row_totals[j] += max(self.triangle_totals[i - 1][j - 1], self.triangle_totals[i - 1][j])
+                row_totals[j] += max(
+                    self.triangle_totals[i - 1][j - 1],
+                    self.triangle_totals[i - 1][j],
+                )
 
             self.triangle_totals.append(row_totals)
 
@@ -24,14 +27,14 @@ class Triangle(object):
         return max(self.triangle_totals[-1])
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     from timeit import timeit
 
     input_triangle = []
-    with open("other/triangle.txt") as f:
+    with open('other/triangle.txt') as f:
         lines = f.readlines()
         for line in lines:
-            line = line.strip().split(" ")
+            line = line.strip().split(' ')
             row = []
             for el in line:
                 el = el.strip()
