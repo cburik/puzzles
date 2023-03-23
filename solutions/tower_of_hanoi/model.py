@@ -12,7 +12,7 @@ class Tower(object):
             labels[1]: [],
             labels[2]: [],
         }
-        self.move_history = []
+        self.move_history: List[str] = []
 
     def _valid_move(self, start: str, end: str) -> bool:
         """checks if it's a valid move"""

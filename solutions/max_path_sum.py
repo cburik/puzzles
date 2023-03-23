@@ -34,9 +34,9 @@ if __name__ == '__main__':
     with open('other/triangle.txt') as f:
         lines = f.readlines()
         for line in lines:
-            line = line.strip().split(' ')
+            line_split = line.strip().split(' ')
             row = []
-            for el in line:
+            for el in line_split:
                 el = el.strip()
                 row.append(int(el))
             input_triangle.append(row)
