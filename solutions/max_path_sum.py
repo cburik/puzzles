@@ -1,12 +1,16 @@
+"""Solves a puzzle to calculate the maximum score by going through a top down through a triangle"""
 from typing import List, Optional
 
 
-class Triangle(object):
+class Triangle:
+    """Class to solve the puzzle"""
+
     def __init__(self, triangle_numbers: List[List[int]]):
         self.triangle_numbers: List[List[int]] = triangle_numbers
         self.triangle_totals: Optional[List[List[int]]] = None
 
     def calculate_totals(self):
+        """Calculates the max score when reaching each element"""
         i = 0
         self.triangle_totals = []
         self.triangle_totals.append(self.triangle_numbers[0])
@@ -24,6 +28,7 @@ class Triangle(object):
             self.triangle_totals.append(row_totals)
 
     def final_score(self):
+        """Returns the final score"""
         return max(self.triangle_totals[-1])
 
 
@@ -31,15 +36,15 @@ if __name__ == '__main__':
     from timeit import timeit
 
     input_triangle = []
-    with open('other/triangle.txt') as f:
+    with open('other/triangle.txt', encoding='utf-8') as f:
         lines = f.readlines()
         for line in lines:
             line_split = line.strip().split(' ')
-            row = []
+            triangle_row = []
             for el in line_split:
                 el = el.strip()
-                row.append(int(el))
-            input_triangle.append(row)
+                triangle_row.append(int(el))
+            input_triangle.append(triangle_row)
 
     triangle = Triangle(input_triangle)
     print(timeit(triangle.calculate_totals, number=1000) / 1000)
