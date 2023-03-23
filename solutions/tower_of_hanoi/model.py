@@ -2,7 +2,7 @@ from typing import List
 
 
 class Tower(object):
-    def __init__(self, n: int, labels: List[str] = ['A', 'B', 'C']):
+    def __init__(self, n: int, labels: List[str] = ["A", "B", "C"]):
         if len(labels) != 3:
             raise ValueError("Unexpected number of labels")
         initial_list = list(range(n))
@@ -25,6 +25,6 @@ class Tower(object):
             disc = self.state[start].pop()
             self.state[end].append(disc)
         else:
-            raise ValueError('Invalid Move')
+            raise ValueError("Invalid Move")
 
         self.move_history.append([start, end])
