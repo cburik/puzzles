@@ -1,0 +1,36 @@
+fail_fast: false
+repos:
+
+- repo: local
+  hooks:
+  - id: isort
+    name: Run isort
+    language: python
+    entry: isort
+    args: [-l 120]
+    types: [python]
+
+  - id: blue
+    name: Run blue
+    language: python
+    entry: blue
+    args: [--line-length=120]
+    types: [python]
+    exclude: tests
+
+  - id: mypy
+    name: Run mypy
+    language: python
+    entry: mypy
+    args: [--ignore-missing-imports]
+    types: [python]
+    exclude: tests
+
+  - id: pylint
+    name: Run pylint
+    description: runs pylint but does not block commit
+    language: python
+    entry: pylint
+    args: [--max-line-length=120]
+    types: [python]
+    exclude: tests
