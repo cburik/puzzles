@@ -1,3 +1,6 @@
+"""Solves puzzle to calculate the number of ways you can climb up a stairs"""
+
+
 def permutation_calculator(n_steps: int, max_step_size: int) -> int:
     """
     Calculates the number of ways you can walk up a stairs with n_steps,
@@ -6,11 +9,13 @@ def permutation_calculator(n_steps: int, max_step_size: int) -> int:
     max_step_size = min(n_steps, max_step_size)
     if n_steps == 0:
         return 1
-    else:
-        return sum(map(
-                lambda x: permutation_calculator(n_steps - x, max_step_size),
-                range(1, max_step_size + 1)
-            ))
+
+    return sum(
+        map(
+            lambda x: permutation_calculator(n_steps - x, max_step_size),
+            range(1, max_step_size + 1),
+        )
+    )
 
 
 def faster_permutation_calculator(n_steps: int, max_step_size: int) -> int:

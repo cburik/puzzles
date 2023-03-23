@@ -1,5 +1,4 @@
-from solutions.climbing_stairs import permutation_calculator
-from solutions.climbing_stairs import faster_permutation_calculator
+from solutions.climbing_stairs import faster_permutation_calculator, permutation_calculator
 
 
 def test_one():

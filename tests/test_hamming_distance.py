@@ -1,7 +1,9 @@
-from solutions.hamming_distance import (total_hamming_distance,
-                                        hamming_distance,
-                                        int_to_32bit_binary_str,
-                                        count_str_differences)
+from solutions.hamming_distance import (
+    count_str_differences,
+    hamming_distance,
+    int_to_32bit_binary_str,
+    total_hamming_distance,
+)
 
 
 def test_int_to_32bit_binary_str_0():

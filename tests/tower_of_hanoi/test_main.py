@@ -1,4 +1,5 @@
 import pytest
+
 from solutions.tower_of_hanoi.main import solve_tower
 from solutions.tower_of_hanoi.model import Tower
 
@@ -26,7 +27,6 @@ def test_n3(expected_state_n3):
     solution = solve_tower(3)
     tower = Tower(3)
     for move in solution:
-        print(move)
         tower.move(move[0], move[1])
     assert tower.state == expected_state_n3
 

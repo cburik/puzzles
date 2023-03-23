@@ -4,11 +4,15 @@ from typing import List
 class Tower(object):
     def __init__(self, n: int, labels: List[str] = ['A', 'B', 'C']):
         if len(labels) != 3:
-            raise ValueError("Unexpected number of labels")
+            raise ValueError('Unexpected number of labels')
         initial_list = list(range(n))
         initial_list.reverse()
-        self.state: dict = {labels[0]: initial_list, labels[1]: [], labels[2]: []}
-        self.move_history = []
+        self.state: dict = {
+            labels[0]: initial_list,
+            labels[1]: [],
+            labels[2]: [],
+        }
+        self.move_history: List[str] = []
 
     def _valid_move(self, start: str, end: str) -> bool:
         """checks if it's a valid move"""
