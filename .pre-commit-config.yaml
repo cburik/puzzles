@@ -37,7 +37,7 @@ repos:
 
   - id: pytest
     name: Run pytest
-    description: Run pytest on push
+    description: Run pytest only on push
     language: python
     entry: pytest -s -v tests
     stages: [push]
