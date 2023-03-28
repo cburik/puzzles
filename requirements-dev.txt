@@ -1,6 +1,7 @@
 pytest
 flake8
-big-O
 mypy
 blue
 pre-commit
+pylint
+isort
