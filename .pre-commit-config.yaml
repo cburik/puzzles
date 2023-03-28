@@ -12,15 +12,23 @@ repos:
     types: [python]
 
   - id: blue
-    name: Run blue
+    name: Run blue (solutions only)
     language: python
     entry: blue
     args: [--line-length=120]
     types: [python]
     exclude: tests
 
+  - id: flake8
+    name: Run flake8 (tests only)
+    language: python
+    entry: flake8
+    args: [--line-length=120]
+    types: [python]
+    exclude: solutions
+
   - id: mypy
-    name: Run mypy
+    name: Run mypy (solutions only)
     language: python
     entry: mypy
     args: [--ignore-missing-imports]
@@ -28,7 +36,7 @@ repos:
     exclude: tests
 
   - id: pylint
-    name: Run pylint
+    name: Run pylint (solutions only)
     language: python
     entry: pylint
     args: [--max-line-length=120]
