@@ -19,7 +19,7 @@ jobs:
           pip install -e .
       - name: Check formatting
         run: |
-          blue solutions --line-length=120 --check
+          black solutions --line-length=120 --check
           flake8 tests --max-line-length=120
       - name: Unit tests
         run: |
