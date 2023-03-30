@@ -32,14 +32,14 @@ class Triangle:
         return max(self.triangle_totals[-1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     from timeit import timeit
 
     input_triangle = []
-    with open('other/triangle.txt', encoding='utf-8') as f:
+    with open("other/triangle.txt", encoding="utf-8") as f:
         lines = f.readlines()
         for line in lines:
-            line_split = line.strip().split(' ')
+            line_split = line.strip().split(" ")
             triangle_row = []
             for el in line_split:
                 el = el.strip()

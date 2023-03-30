@@ -4,7 +4,7 @@ from typing import List
 
 def int_to_32bit_binary_str(integer: int) -> str:
     """Converts an integer to 32 bit binary string"""
-    return format(integer, '032b')
+    return format(integer, "032b")
 
 
 def count_str_differences(string_a: str, string_b: str) -> int:

@@ -1,6 +1,6 @@
 pytest
 mypy
-blue
+black
 pre-commit
 pylint
 isort

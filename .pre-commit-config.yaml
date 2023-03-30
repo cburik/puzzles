@@ -11,10 +11,10 @@ repos:
     args: [-l 120]
     types: [python]
 
-  - id: blue
-    name: Run blue (solutions only)
+  - id: black
+    name: Run black (solutions only)
     language: python
-    entry: blue
+    entry: black
     args: [--line-length=120]
     types: [python]
     exclude: tests
