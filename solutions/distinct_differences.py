@@ -46,5 +46,5 @@ def get_distinct_difference(input_list: List[int]) -> List[int]:
     return distinct_difference
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     get_distinct_difference([4, 4, 3, 3])

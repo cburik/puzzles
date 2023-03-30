@@ -25,7 +25,7 @@ def faster_permutation_calculator(n_steps: int, max_step_size: int) -> int:
     """
     max_step_size = min(n_steps, max_step_size)
     if n_steps < 0 or max_step_size < 1:
-        raise ValueError('No solution')
+        raise ValueError("No solution")
 
     if n_steps < 1 or max_step_size == 1:
         return 1
